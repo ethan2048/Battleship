@@ -1,8 +1,7 @@
 package com.Main;
 
+import com.Methods.*;
 import com.battleship.Field;
-
-import Methods.*;
 
 
 

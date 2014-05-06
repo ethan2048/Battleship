@@ -9,13 +9,18 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		int LENGHT = 4;
-		int SHIP_LENGHT = 4;
+		int LENGHT = 6;
+		int SHIP_LENGHT = 6;
+		int y = 0;
+		int x = 1;
+		
 		
 		Field bfield = new Field(LENGHT);
+		bfield.setFieldCell(y, x, 'C');
+		bfield.fieldView();
 		KeyboardInput kb = new KeyboardInput();
-		boolean indent = kb.arrayTest(bfield.getFieldVector(0), 1, LENGHT, SHIP_LENGHT);
-		System.out.println(indent);
+		bfield.setField(kb.insertInArray(bfield.getField(), SHIP_LENGHT, y, x, LENGHT)); //адовая строчка, которая возвращает отредактированный массив в замену
+		bfield.fieldView();
 		
 		
 		

@@ -32,6 +32,7 @@ public class Field {
 	public void setFieldCell(int y, int x, char character) { //сеттер для клетки
 		if ((x<this.LINE_SIZE) && (y<this.LINE_SIZE) && (x>-1) && (y>-1)) this.field[y][x] = character;
 	}
+	
 		
 	public int getLINE_SIZE() {
 		return LINE_SIZE;

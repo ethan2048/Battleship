@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class KeyboardInput implements Input{
 	
+	private static final char SHIP_CHAR = 'X';
+	
 	//Override
 	public int inputInt(){
 		System.out.print("Input number: ");
@@ -30,14 +32,20 @@ public class KeyboardInput implements Input{
 //			}
 //	}
 //	
-	public boolean insertInArray(char[][] array, int SHIP_LENGHT, int y, int x, int ARRAY_LENGHT) { //закрыть, возможно сделать булевым
+	public char[][] insertInArray(char[][] array, int SHIP_LENGHT, int y, int x, int ARRAY_LENGHT) { //закрыть, возвращает отредактированный массив, если ок и клон если не ок
+		char[][] arrayClone = new char[ARRAY_LENGHT][ARRAY_LENGHT];
+		arrayClone = array;
 		if (arrayTest(array[y], x, ARRAY_LENGHT, SHIP_LENGHT) == true) {
-			for (int i = x; i < SHIP_LENGHT; i++) {
-				array[y][i] = 'X';
+			System.out.println("Joy and fun");
+			for (int i = x; i < SHIP_LENGHT + 1; i++) { //+1 потому что несоотвествие между массивом и длиной
+				arrayClone[y][i] = SHIP_CHAR;
 			}
-			return true;
+			return arrayClone;
 		}
-		else return false;
+		else {
+			System.out.println("Death and rebirth");
+			return array;
+		}
 	}
 	
 	

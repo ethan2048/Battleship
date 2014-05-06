@@ -36,14 +36,14 @@ public class KeyboardInput implements Input{
 		char[][] arrayClone = new char[ARRAY_LENGHT][ARRAY_LENGHT];
 		arrayClone = array;
 		if (arrayTest(array[y], x, ARRAY_LENGHT, SHIP_LENGHT) == true) {
-			System.out.println("Joy and fun");
+			//System.out.println("Joy and fun");
 			for (int i = x; i < SHIP_LENGHT + 1; i++) { //+1 потому что несоотвествие между массивом и длиной
 				arrayClone[y][i] = SHIP_CHAR;
 			}
 			return arrayClone;
 		}
 		else {
-			System.out.println("Death and rebirth");
+			//System.out.println("Death and rebirth");
 			return array;
 		}
 	}

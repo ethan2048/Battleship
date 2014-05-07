@@ -21,5 +21,15 @@ public class Array {
 		}
 	}
 	
+	public static char[][] transpose(char[][] field){
+		char[][] cloneField = new char[field.length][field.length];
+		for (int i = 0; i < field.length; i++) {
+			for (int j = 0; j < field.length; j++) {
+				cloneField[i][j] = field[j][i];
+			}
+		}
+		return cloneField;
+	}
+	
 	
 }

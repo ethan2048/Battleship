@@ -42,7 +42,8 @@ public class Field {
 		return field[y]; 
 	}
 	
-	public void fieldView() {
+	
+	public void view() {
 		for (int i = 0; i < LINE_SIZE; i++) {
 			com.Methods.Array.viewCharArray(this.field[i], this.LINE_SIZE);
 		}

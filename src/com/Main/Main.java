@@ -9,20 +9,20 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		int LENGHT = 10;
-		int SHIP_LENGTH_1 = 4;
-		int SHIP_LENGTH_2 = 5;
-		int y = 1;
-		int x = 1;
+		int LENGHT = 20;
 		char ch = ' ';
+		int oneDeck = 4, twoDeck = 3, threeDeck = 2, fourDeck = 1; 
+		final int ONE_DECK_COUNT = 4, TWO_DECK_COUNT = 3, THREE_DECK_COUNT = 2, FOUR_DECK_COUNT = 1;
 		
-		Input key = new KeyboardInput();
+		IFInput key = new KeyboardInput();
 		Field bfield = new Field(LENGHT);
-		bfield.setFieldCell(y, x, 'C');
+		//bfield.setFieldCell(y, x, 'C');
 		bfield.view();
 		System.out.println();
-		//bfield.setField(key.menuHorizontalVertical(bfield.getField(), SHIP_LENGHT_1, y, x));
-		bfield.setField(key.menuHorizontalVertical(bfield.getField(), SHIP_LENGTH_1, y, x));
+		System.out.println();
+		bfield.setField(key.shipMenu(bfield.getField(), ONE_DECK_COUNT, TWO_DECK_COUNT, THREE_DECK_COUNT, FOUR_DECK_COUNT));
+		
+		System.out.println("one decker count is: " + oneDeck);
 		System.out.println();
 		bfield.view();
 	}

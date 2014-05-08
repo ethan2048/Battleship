@@ -45,7 +45,7 @@ public class Field {
 	
 	public void view() {
 		for (int i = 0; i < LINE_SIZE; i++) {
-			com.Methods.Array.viewCharArray(this.field[i], this.LINE_SIZE);
+			com.Methods.Array.viewCharArray(this.field[i]);
 		}
 	}
 	

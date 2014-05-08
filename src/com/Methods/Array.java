@@ -8,8 +8,13 @@ public class Array {
 		return CHARACTER;
 	}
 
-	public static void viewCharArray(char[] array, int LINE_SIZE) {
-		for (int i = 0; i < LINE_SIZE; i++) {
+	public static void view(char[][] array){
+		for (int i = 0; i < array.length; i++) {
+			viewCharArray(array[i]);
+		}
+	}
+	public static void viewCharArray(char[] array) {
+		for (int i = 0; i < array.length; i++) {
 			System.out.print("[" + array[i] + "]");
 		}
 		System.out.println();
